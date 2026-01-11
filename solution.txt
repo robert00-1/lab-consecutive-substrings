@@ -1,2 +1,58 @@
 Please add your pseudocode to this file
 And a written explanation of your solution
+
+BEGIN
+
+  FUNCTION getConsecutiveSubstrings(inputString)
+
+    CREATE empty list called substrings
+
+    FOR startIndex FROM 0 TO length of inputString - 1
+
+      SET currentSubstring TO empty string
+
+      FOR endIndex FROM startIndex TO length of inputString - 1
+
+        ADD character at endIndex to currentSubstring
+        ADD currentSubstring to substrings list
+
+      END FOR
+
+    END FOR
+
+    RETURN substrings
+
+  END FUNCTION
+
+END
+
+
+Solution Description:
+This solution generates all consecutive substrings from a given string.
+The string is treated like an array of characters. The algorithm uses
+two loops: the outer loop selects a starting position, and the inner loop
+builds substrings by adding one character at a time moving to the right.
+Each newly formed substring is stored in a result array.
+
+How It Works:
+1. Initialize an empty array to store substrings.
+2. Loop through the string using an index as the starting point.
+3. For each starting point, create substrings by extending one character
+   at a time to the right.
+4. Add each substring to the result array.
+5. Return the array containing all consecutive substrings.
+
+Time Complexity:
+O(n²), where n is the length of the input string.
+This is because the solution uses two nested loops that both depend on
+the size of the input.
+
+Space Complexity:
+O(n²), since all possible substrings are stored in memory.
+
+
+
+
+
+
+
